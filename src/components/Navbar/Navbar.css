@@ -1,0 +1,44 @@
+.navbar-wrapper{
+    height: 10%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.navbar-logo{
+    height: 100%;
+    width: 20%;
+}
+
+.navbar-links{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    font-family: 'Fira Code', monospace;;
+}
+
+.a-link{
+    color: #ccd6f6;
+}
+
+.a-link:hover{
+    color: #9d00ff;
+    transition: color 0.8s ease-in-out;
+}
+
+.num-link{
+    color: #9d00ff;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+}
