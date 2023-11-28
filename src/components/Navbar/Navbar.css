@@ -46,4 +46,19 @@ a{
 
 .active-link {
     border: 2px dashed #9d00ff;
-  }
+}
+
+.navbar-logo-wrapper{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+
+}
+
+.navbar-logo{
+    height: 25px;
+    width: 25px;
+    fill: #9d00ff;
+}

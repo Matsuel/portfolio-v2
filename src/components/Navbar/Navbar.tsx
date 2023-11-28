@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
 import './Navbar.css'
+import logo from '../../assets/logo.svg'
+import Logo from '../../assets/Logo'
 
 const Navbar = () => {
     const [linkSelected, setLinkSelected] = useState(-1);
@@ -17,7 +19,10 @@ const Navbar = () => {
 
   return (
     <div className='navbar-wrapper'>
-        <div className="navbar-logo">
+        <div className="navbar-logo-wrapper">
+            <a href="/" className="navbar-logo">
+                <Logo />
+            </a>
         </div>
         <div className="navbar-links">
             {[0,1,2,3].map((index)=>(
