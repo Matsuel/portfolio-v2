@@ -26,6 +26,7 @@
 
 .a-link{
     color: #ccd6f6;
+    padding: 10px;  
 }
 
 .a-link:hover{
@@ -42,3 +43,7 @@
 a{
     text-decoration: none;
 }
+
+.active-link {
+    border: 2px dashed #9d00ff;
+  }
