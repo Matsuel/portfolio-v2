@@ -42,13 +42,6 @@ const HeroSection = () => {
             <button onClick={()=> window.location.href="#contact"} className='button-contact-hero'>Hire me</button>
           </div>
         </motion.div>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="col-span-4 place-self-center mt-4 lg:mt-0"
-        >
-        </motion.div>
       </div>
     </section>
   )
