@@ -37,7 +37,7 @@ const Projects = () => {
 
   const iconVariants = {
     normal: { scale: 1 },
-    enlarged: { scale: 1.2 },
+    enlarged: { scale: 1.2, rotate: [0, 10, -10, 5, -5, 0], transition: { duration: 0.5 } },
   };
 
   return (
