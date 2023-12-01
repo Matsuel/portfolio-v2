@@ -1,0 +1,78 @@
+.projects-section-wrapper{
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-title{
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 6rem;
+    line-height: 1;
+    line-height: 1.5;
+}
+
+.projects-section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap; /* Allows the items to wrap as needed */
+    overflow: hidden;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    justify-content: space-around;
+}
+
+
+
+.project-card{
+    width: 40%;
+    height: auto;
+    min-height: 200px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    border: 1px solid #fff;
+}
+
+.project-name{
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    line-height: 1;
+    line-height: 1.5;
+}
+
+.project-description{
+    color: rgb(173, 183, 190);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    width: 90%;
+    text-align: center;
+}
+
+.project-technos{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+.project-technology{
+    color: rgb(173, 183, 190);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    width: 90%;
+    text-align: center;
+}
