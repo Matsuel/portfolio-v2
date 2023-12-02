@@ -25,19 +25,40 @@ const icons = {
 
 const Projects = () => {
 
-  const [githubHovered, setGithubHovered] = useState(false)
+  const [githubHovered, setGithubHovered] = useState({});
+  const [githubClicked, setGithubClicked] = useState({});
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setGithubHovered((prev) => !prev);
-    }, 1000);
+    const intervals = ProjectsDatas.map((_, index) => {
+      return setInterval(() => {
+        // @ts-ignore
+        setGithubHovered((prev) => ({ ...prev, [index]: !prev[index] }));
+      }, 1000);
+    });
 
-    return () => clearInterval(interval);
+    return () => {
+      intervals.forEach((interval) => clearInterval(interval));
+    };
   }, []);
+
+  const handleGithubClick = (index: number) => {
+    setGithubClicked((prev) => ({ ...prev, [index]: true }));
+
+    // Timeout to simulate the animation duration
+    setTimeout(() => {
+      window.open(ProjectsDatas[index].githubLink, '_blank');
+      setGithubClicked((prev) => ({ ...prev, [index]: false }));
+    }, 500); // Change this to match your animation duration
+  };
+
+  const handleLiveClick = (index: number) => {
+    window.open(ProjectsDatas[index].liveLink, '_blank');
+  };
 
   const iconVariants = {
     normal: { scale: 1 },
     enlarged: { scale: 1.2, rotate: [0, 10, -10, 5, -5, 0], transition: { duration: 0.5 } },
+    clicked: { x: 100, rotate: [0, 720], transition: { duration: 0.5 } }
   };
 
   return (
@@ -69,25 +90,23 @@ const Projects = () => {
             </div>
             <div className="project-links">
               {project.liveLink ? (
-                <a href={project.liveLink} target='_blank' className="project-link">
+                <div className="project-link" onClick={()=> handleLiveClick(index)}>
                   <FaChrome className='link-icon' />
-                </a>
+                </div>
               ) : (
                 ''
               )}
               {project.githubLink ? (
-                <a href={project.githubLink} target='_blank' className="project-link"
-                >
+                <div className="github-link" onClick={() => handleGithubClick(index)}>
                   <motion.div
-                    className="github-link"
-                    animate={githubHovered ? 'enlarged' : 'normal'}
+                    className="github-icon"
+                    //@ts-ignore
+                    animate={githubClicked[index] ? 'clicked' : githubHovered[index] ? 'enlarged' : 'normal'}
                     variants={iconVariants}
-                    transition={{ duration: 0.5 }}
                   >
-
-                    <FaGithub className='link-icon' />
+                    <FaGithub className="link-icon" />
                   </motion.div>
-                </a>
+                </div>
               ) : (
                 ''
               )
