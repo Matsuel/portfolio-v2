@@ -113,7 +113,6 @@ const Projects = () => {
               )
               }
             </div>
-
           </motion.div>
         ))}
       </div>
