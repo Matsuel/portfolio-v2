@@ -2,8 +2,18 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import {TypeAnimation} from 'react-type-animation'
 import './HeroSection.css'
+import Lottie from 'react-lottie'
+import animationData from "../../assets/coffee.json"
 
 const HeroSection = () => {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice"
+    }
+  };
   return (
     <section className="hero-section-wrapper">
       <div className="hero-section-main">
@@ -41,6 +51,9 @@ const HeroSection = () => {
           <div>
             <button onClick={()=> window.location.href="#contact"} className='button-contact-hero'>Hire me</button>
           </div>
+        </motion.div>
+        <motion.div className="motion-2">
+          <Lottie options={defaultOptions} height={600} width={600} />
         </motion.div>
       </div>
     </section>

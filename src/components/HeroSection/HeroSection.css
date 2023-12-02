@@ -1,6 +1,6 @@
 .hero-section-main {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 
@@ -12,10 +12,19 @@
 }
 
 .motion-1 {
+    flex: 0 0 60%;
     grid-column: span 8 / span 8;
     place-self: center;
     text-align: center;
     justify-self: start;
+}
+
+.motion-2 {
+    flex: 0 0 40%;
+    grid-column: span 8 / span 8;
+    place-self: center;
+    text-align: center;
+    justify-self: end;
 }
 
 .h1-title-hero {
