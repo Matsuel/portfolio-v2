@@ -11,6 +11,7 @@ import Node from '../../assets/skills/nodejs.svg'
 import Js from '../../assets/skills/js.svg'
 import Csharp from '../../assets/skills/csharp.svg'
 import Python from '../../assets/skills/python.svg'
+import Chrome from '../../assets/chrome.svg'
 
 const icons = {
   react: ReactIcon,
@@ -91,7 +92,7 @@ const Projects = () => {
             <div className="project-links">
               {project.liveLink ? (
                 <div className="project-link" onClick={()=> handleLiveClick(index)}>
-                  <FaChrome className='link-icon' />
+                  <img src={Chrome} alt="chrome" className='link-icon' />
                 </div>
               ) : (
                 ''
