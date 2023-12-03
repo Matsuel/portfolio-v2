@@ -21,14 +21,14 @@ const Contact = () => {
             <div className="contact-wrap">
                 <div className="contact-form-wrapper">
                     <form method="POST" className='contact-form'>
-                        <label className='label-form'><span className=''>Your Name</span>
-                            <input type="text" name="name" placeholder="Name" />
+                        <label className='label-form'><span className='field-contact-text'>Your Name</span>
+                            <input type="text" name="name" placeholder="Name" className='input-form-text' />
                         </label>
-                        <label className='label-form'><span className=''>Your Email</span>
-                            <input type="email" name="email" placeholder="Email" />
+                        <label className='label-form'><span className='field-contact-text'>Your Email</span>
+                            <input type="email" name="email" placeholder="Email" className='input-form-text' />
                         </label>
-                        <label className='label-form'><span className=''>Your Message</span>
-                            <textarea name="message" placeholder="Message" />
+                        <label className='label-form'><span className='field-contact-text'>Your Message</span>
+                            <textarea name="message" placeholder="Message" className='input-form-area' />
                         </label>
                         <button type="submit">Send</button>
                     </form>
