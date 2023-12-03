@@ -1,6 +1,7 @@
-import React, { useRef, Suspense } from 'react'
+import React, { useRef, Suspense, useState } from 'react'
 import { Stats, OrbitControls, Circle, useGLTF, Preload } from '@react-three/drei'
 import { Canvas, useLoader } from '@react-three/fiber'
+import emailjs from "@emailjs/browser";
 import './Contact.css'
 
 const Earth = () => {
@@ -12,6 +13,44 @@ const Earth = () => {
 };
 
 const Contact = () => {
+    const formRef = useRef<HTMLFormElement>(null)
+    const [form, setForm] = useState({
+        name: "",
+        email: "",
+        message: "",
+    });
+
+    const handleChange = (e: { target: any; }) => {
+        const { target } = e;
+        const { name, value } = target;
+
+        setForm({
+            ...form,
+            [name]: value,
+        });
+    };
+
+    const handleSubmit = (e: { preventDefault: () => void; }) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm(
+                "service",
+                "template",
+                formRef.current!,
+            )
+            .then(
+                (result) => {
+                    console.log(result.text);
+                    alert("Message sent!");
+                },
+                (error) => {
+                    console.log(error.text);
+                    alert("An error occurred, Please try again");
+                }
+            );
+    }
+
     return (
         <section
             id="contact"
@@ -20,17 +59,17 @@ const Contact = () => {
             <h1 className="contact-title">Contact</h1>
             <div className="contact-wrap">
                 <div className="contact-form-wrapper">
-                    <form method="POST" className='contact-form'>
+                    <form ref={formRef} className='contact-form'>
                         <label className='label-form'><span className='field-contact-text'>Your Name</span>
-                            <input type="text" name="name" placeholder="Name" className='input-form-text' />
+                            <input value={form.name} onChange={handleChange} type="text" name="name" placeholder="Name" className='input-form-text' />
                         </label>
                         <label className='label-form'><span className='field-contact-text'>Your Email</span>
-                            <input type="email" name="email" placeholder="Email" className='input-form-text' />
+                            <input value={form.email} onChange={handleChange}  type="email" name="email" placeholder="Email" className='input-form-text' />
                         </label>
                         <label className='label-form'><span className='field-contact-text'>Your Message</span>
-                            <textarea name="message" placeholder="Message" className='input-form-area' />
+                            <textarea value={form.message} onChange={handleChange}  name="message" placeholder="Message" className='input-form-area' />
                         </label>
-                        <button type="submit">Send</button>
+                        <button type="submit" className='button-form'>Send</button>
                     </form>
                 </div>
                 <div className="contact-planet">
