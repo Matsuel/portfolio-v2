@@ -1,6 +1,6 @@
 import React, { useRef, Suspense, useState } from 'react'
-import { Stats, OrbitControls, Circle, useGLTF, Preload } from '@react-three/drei'
-import { Canvas, useLoader } from '@react-three/fiber'
+import { OrbitControls, useGLTF, Preload } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
 import emailjs from "@emailjs/browser";
 import './Contact.css'
 
