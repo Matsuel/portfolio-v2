@@ -1,11 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import {TypeAnimation} from 'react-type-animation'
+import { TypeAnimation } from 'react-type-animation'
 import './HeroSection.css'
 import Lottie from 'react-lottie'
 import animationData from "../../assets/coffee.json"
 
 const HeroSection = () => {
+
+  const [isEnterPressed, setIsEnterPressed] = useState(false);
+
+  useEffect(() => {
+    const handleKeyDown = (event: { key: string }) => {
+      if (event.key === 'Enter') {
+        setIsEnterPressed(true);
+        setTimeout(() => {
+          setIsEnterPressed(false);
+        }, 300);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -49,10 +69,10 @@ const HeroSection = () => {
             voluptuous.
           </p>
           <div>
-            <button onClick={()=> window.location.href="#contact"} className='button-contact-hero'>Hire me</button>
+            <button onClick={() => window.location.href = "#contact"} className='button-contact-hero'>Hire me</button>
           </div>
         </motion.div>
-        <motion.div className="motion-2">
+        <motion.div animate={{ scale: isEnterPressed ? 1.3 : 1 }} transition={{duration:0.3}} className="motion-2">
           <Lottie options={defaultOptions} height={600} width={600} />
         </motion.div>
       </div>

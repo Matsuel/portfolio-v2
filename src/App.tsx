@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './components/Navbar/Navbar';
 import HeroSection from './components/HeroSection/HeroSection';
 import Skills from './components/Skills/Skills';
@@ -7,6 +7,9 @@ import Contact from './components/Contact/Contact';
 import './App.css';
 
 function App() {
+
+  
+
   return (
     <div className="App">
       <Navbar />
