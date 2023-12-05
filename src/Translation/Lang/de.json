@@ -1,0 +1,33 @@
+{
+    "navbar":{
+        "home":"Heim",
+        "about":"Um",
+        "contact":"Kontakt",
+        "projects": "Projekte"
+    },
+    "hero":{
+        "hello":"Hallo, ich bin",
+        "typeAnimation":{
+            "part1":"Full-Stack-Entwickler",
+            "part2":"Back-End-Liebhaber",
+            "part3":"mobiler Entwickler"
+        },
+        "hireMe":"Mieten Sie mich"
+    },
+    "skills":{
+        "title":"Fähigkeiten",
+        "paragraph":"Derzeit bin ich Student und tauche in die faszinierende Welt der IT und Entwicklung ein. Ich lerne verschiedene Programmiersprachen, die es mir ermöglichen, Fähigkeiten zu erwerben und in meinen verschiedenen Projekten effizienter zu werden."
+    },
+    "projects":{
+        "title":"Projekte"
+    },
+    "contact":{
+        "title":"Kontakt",
+        "name":"Name",
+        "email":"E-Mail",
+        "message":"Nachricht",
+        "yourName":"Ihr Name",
+        "yourEmail":"Ihre E-Mail",
+        "yourMessage":"Ihre Nachricht"
+    }
+}

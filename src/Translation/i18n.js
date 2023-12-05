@@ -2,11 +2,10 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { Languages } from "./languages";
-import translationEN from './i18n/en.json';
-import translationFR from './i18n/fr.json';
-import translationES from './i18n/es.json';
-import translationDE from './i18n/de.json';
-import translationIT from './i18n/it.json';
+import translationEN from './Lang/en.json';
+import translationFR from './Lang/fr.json';
+import translationES from './Lang/es.json';
+import translationDE from './Lang/de.json';
 
 let defaultLanguage = Languages.FR;
 
@@ -23,9 +22,6 @@ const resources = {
     },
     de:{
         translation: translationDE
-    },
-    it:{
-        translation: translationIT
     },
 };
 

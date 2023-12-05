@@ -1,0 +1,33 @@
+{
+    "navbar": {
+        "home": "Inicio",
+        "about": "Acerca de",
+        "contact": "Contacto",
+        "projects": "Proyectos"
+    },
+    "hero": {
+        "hello": "Hola, soy",
+        "typeAnimation": {
+            "part1": "Desarrollador Full-Stack",
+            "part2": "Amante del Back-End",
+            "part3": "Desarrollador Móvil"
+        },
+        "hireMe": "Contrátame"
+    },
+    "skills": {
+        "title": "Habilidades",
+        "paragraph": "Actualmente, soy un estudiante sumergiéndome en el fascinante mundo de la informática y el desarrollo. Estoy aprendiendo varios lenguajes de programación, lo que me permite adquirir habilidades y ser más eficiente en mis diversos proyectos."
+    },
+    "projects": {
+        "title": "Proyectos"
+    },
+    "contact": {
+        "title": "Contacto",
+        "name": "Nombre",
+        "email": "Correo electrónico",
+        "message": "Mensaje",
+        "yourName": "Tu nombre",
+        "yourEmail": "Tu correo electrónico",
+        "yourMessage": "Tu mensaje"
+    }
+}
