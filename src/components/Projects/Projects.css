@@ -14,7 +14,7 @@
     font-size: 6rem;
     line-height: 1;
     line-height: 1.5;
-    font-family: 'Fira Code', monospace;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .projects-section{
@@ -66,7 +66,7 @@
     font-size: 2rem;
     line-height: 1;
     line-height: 1.5;
-    font-family: 'Fira Code', monospace;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .project-description{
@@ -76,7 +76,7 @@
     line-height: 1.5rem;
     width: 90%;
     text-align: center;
-    font-family: 'Fira Code', monospace;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .project-technos{
