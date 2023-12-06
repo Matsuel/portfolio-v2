@@ -21,6 +21,7 @@
     font-size: 6rem;
     line-height: 1;
     line-height: 1.5;
+    font-family: 'Fira Code', monospace;
 }
 
 .contact-form-wrapper{
@@ -74,6 +75,7 @@
     font-size: 1.5rem;
     background-color: #0b0b29;
     color: #fff;
+    font-family: 'Fira Code', monospace;
 }
 
 .input-form-area{
@@ -86,6 +88,7 @@
     font-size: 1.5rem;
     background-color: #0b0b29;
     color: #fff;
+    font-family: 'Fira Code', monospace;
 }
 
 textarea{
@@ -96,6 +99,7 @@ textarea{
     font-size: 1.5rem;
     color: #fff;
     margin-bottom: 10px;
+    font-family: 'Fira Code', monospace;
 }
 
 .button-form{
@@ -108,4 +112,5 @@ textarea{
     background-color: #0b0b29;
     color: #fff;
     cursor: pointer;
+    font-family: 'Fira Code', monospace;
 }
