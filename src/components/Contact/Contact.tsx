@@ -2,6 +2,7 @@ import React, { useRef, Suspense, useState } from 'react'
 import { OrbitControls, useGLTF, Preload } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import emailjs from "@emailjs/browser";
+import dotenv from 'dotenv'
 import './Contact.css'
 
 const Earth = () => {
@@ -23,7 +24,6 @@ const Contact = () => {
     const handleChange = (e: { target: any; }) => {
         const { target } = e;
         const { name, value } = target;
-
         setForm({
             ...form,
             [name]: value,
@@ -35,9 +35,10 @@ const Contact = () => {
 
         emailjs
             .sendForm(
-                "service",
-                "template",
+                process.env.REACT_APP_SERVICE_ID!,
+                process.env.REACT_APP_TEMPLATE_ID!,
                 formRef.current!,
+                process.env.REACT_APP_PUBLIC_KEY!
             )
             .then(
                 (result) => {
@@ -59,7 +60,7 @@ const Contact = () => {
             <h1 className="contact-title">Contact</h1>
             <div className="contact-wrap">
                 <div className="contact-form-wrapper">
-                    <form ref={formRef} className='contact-form'>
+                    <form ref={formRef} onSubmit={handleSubmit} className='contact-form'>
                         <label className='label-form'><span className='field-contact-text'>Your Name</span>
                             <input value={form.name} onChange={handleChange} type="text" name="name" placeholder="Name" className='input-form-text' />
                         </label>
