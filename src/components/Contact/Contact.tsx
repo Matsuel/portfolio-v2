@@ -21,6 +21,8 @@ const Contact = () => {
         message: "",
     });
 
+    const [isSubmitted, setIsSubmitted] = useState("");
+
     const handleChange = (e: { target: any; }) => {
         const { target } = e;
         const { name, value } = target;
@@ -42,12 +44,10 @@ const Contact = () => {
             )
             .then(
                 (result) => {
-                    console.log(result.text);
-                    alert("Message sent!");
+                    setIsSubmitted("Message sent successfully! ✅");
                 },
                 (error) => {
-                    console.log(error.text);
-                    alert("An error occurred, Please try again");
+                    setIsSubmitted("Message not sent!");
                 }
             );
     }
@@ -65,12 +65,15 @@ const Contact = () => {
                             <input value={form.name} onChange={handleChange} type="text" name="name" placeholder="Name" className='input-form-text' />
                         </label>
                         <label className='label-form'><span className='field-contact-text'>Your Email</span>
-                            <input value={form.email} onChange={handleChange}  type="email" name="email" placeholder="Email" className='input-form-text' />
+                            <input value={form.email} onChange={handleChange} type="email" name="email" placeholder="Email" className='input-form-text' />
                         </label>
                         <label className='label-form'><span className='field-contact-text'>Your Message</span>
-                            <textarea value={form.message} onChange={handleChange}  name="message" placeholder="Message" className='input-form-area' />
+                            <textarea value={form.message} onChange={handleChange} name="message" placeholder="Message" className='input-form-area' />
                         </label>
                         <button type="submit" className='button-form'>Send</button>
+                        <div className='contact-message'>
+                            {isSubmitted}
+                        </div>
                     </form>
                 </div>
                 <div className="contact-planet">
