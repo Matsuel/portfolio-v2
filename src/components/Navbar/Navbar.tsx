@@ -13,8 +13,8 @@ const Navbar = () => {
         }
       };
 
-    const linksHref=["#home","#about","#projects","#contact"]
-    const linksName=["Home","About","Projects","Contact"]
+    const linksHref=["#home","#projects","#contact"]
+    const linksName=["Home","Projects","Contact"]
 
   return (
     <div className='navbar-wrapper'>
@@ -24,7 +24,7 @@ const Navbar = () => {
             </a>
         </div>
         <div className="navbar-links">
-            {[0,1,2,3].map((index)=>(
+            {[0,1,2].map((index)=>(
                 <div className="link" key={index}>
                     <a href={linksHref[index]}
                     className={`a-link ${linkSelected === index ? 'active-link' : ''}`}
