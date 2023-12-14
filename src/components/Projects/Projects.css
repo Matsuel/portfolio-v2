@@ -7,6 +7,19 @@
     align-items: center;
 }
 
+.projects-background-video{
+    width: auto;
+    height: 150vh;
+    min-height: 100vh;
+    max-width: 100%;
+    position: absolute;
+    /* top: 0; */
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+
+}
+
 .projects-title{
     font-weight: 700;
     color: #fff;
@@ -39,6 +52,7 @@
     justify-content: center;
     margin-bottom: 2rem;
     border: 1px solid #fff;
+    background-color: rgba(10, 25, 47, 0.5);
 }
 
 .project-infos{
@@ -133,6 +147,10 @@
 }
 
 @media screen and (max-width: 1024px) {
+    .projects-background-video{
+        display: none;
+    }
+
     .projects-section{
         justify-content: space-evenly;
     }

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './Projects.css'
 import { motion } from 'framer-motion'
 import { ProjectsDatas } from './datas'
-import { FaGithub } from 'react-icons/fa'
+import { FaGithub, FaGit } from 'react-icons/fa'
 import ReactIcon from '../../assets/skills/react.svg'
 import RactNative from '../../assets/skills/react-native.svg'
 import Css from '../../assets/skills/css.svg'
@@ -12,6 +12,9 @@ import Js from '../../assets/skills/js.svg'
 import Csharp from '../../assets/skills/csharp.svg'
 import Python from '../../assets/skills/python.svg'
 import Chrome from '../../assets/chrome.svg'
+//@ts-ignore
+import Encryption from '../../assets/encryption.webm'
+import Git from '../../assets/git.svg'
 
 const icons = {
   react: ReactIcon,
@@ -67,6 +70,7 @@ const Projects = () => {
       id="projects"
       className="projects-section-wrapper"
     >
+      <video autoPlay loop muted src={Encryption} className='projects-background-video'></video>
       <h1 className='projects-title'>Projects</h1>
       <div className="projects-section">
         {ProjectsDatas.map((project, index) => (
@@ -105,7 +109,7 @@ const Projects = () => {
                     animate={githubClicked[index] ? 'clicked' : githubHovered[index] ? 'enlarged' : 'normal'}
                     variants={iconVariants}
                   >
-                    <FaGithub className="link-icon" />
+                    <img src={Git} alt="Git-Icon" className='link-icon' />
                   </motion.div>
                 </div>
               ) : (
