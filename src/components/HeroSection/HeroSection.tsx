@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, useAnimation } from 'framer-motion'
 import { TypeAnimation } from 'react-type-animation'
 import './HeroSection.css'
 import Lottie from 'react-lottie'
@@ -7,6 +7,8 @@ import animationData from "../../assets/coffee.json"
 
 const HeroSection = () => {
   const windowHeight = window.innerHeight;
+
+  const [titleClicked, setTitleClicked] = useState(false);
 
   const [isEnterPressed, setIsEnterPressed] = useState(false);
 
@@ -26,7 +28,7 @@ const HeroSection = () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
   }, []);
-    
+
 
   const defaultOptions = {
     loop: true,
@@ -36,6 +38,19 @@ const HeroSection = () => {
       preserveAspectRatio: "xMidYMid slice"
     }
   };
+
+  const controls = useAnimation();
+
+  const handleTitleClick = () => {
+    if (!titleClicked) {
+      setTitleClicked(true);
+      controls.start({ rotate: 360, transition: { duration: 1 } });
+    } else {
+      setTitleClicked(false);
+      controls.start({ rotate: 0, transition: { duration: 1 } });
+    }
+  }
+
   return (
     <section className="hero-section-wrapper">
       <div className="hero-section-main">
@@ -45,11 +60,14 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="motion-1"
         >
-          <h1 className="h1-title-hero">
+          <motion.h1
+            animate={controls}
+            onClick={handleTitleClick}
+            className="h1-title-hero">
             <span className="span-title-hero">
               Hello, I&apos;m{" "}
             </span>
-            <br></br>
+            <br />
             <TypeAnimation
               sequence={[
                 "Mathéo",
@@ -65,7 +83,7 @@ const HeroSection = () => {
               speed={50}
               repeat={Infinity}
             />
-          </h1>
+          </motion.h1>
           <p className="lorem-p-hero sm:text-lg lg:text-xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
             voluptuous.
@@ -74,8 +92,8 @@ const HeroSection = () => {
             <button onClick={() => window.location.href = "#contact"} className='button-contact-hero'>Hire me</button>
           </div>
         </motion.div>
-        <motion.div animate={{ scale: isEnterPressed ? 1.3 : 1 }} transition={{duration:0.3}} className="motion-2">
-          <Lottie options={defaultOptions} height={windowHeight*0.62}  />
+        <motion.div animate={{ scale: isEnterPressed ? 1.3 : 1 }} transition={{ duration: 0.3 }} className="motion-2">
+          <Lottie options={defaultOptions} height={windowHeight * 0.62} />
         </motion.div>
       </div>
     </section>
