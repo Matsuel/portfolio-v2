@@ -93,7 +93,7 @@ const Contact = () => {
                         <Suspense fallback={null}>
                             <OrbitControls
                                 autoRotate
-                                autoRotateSpeed={2}
+                                autoRotateSpeed={3}
                                 enableZoom={false}
                                 maxPolarAngle={Math.PI / 2}
                                 minPolarAngle={Math.PI / 2}
