@@ -10,10 +10,9 @@
 .projects-background-video{
     width: auto;
     height: 150vh;
-    min-height: 100vh;
+    min-height: auto;
     max-width: 100%;
     position: absolute;
-    /* top: 0; */
     left: 0;
     z-index: -1;
     object-fit: cover;
@@ -144,6 +143,13 @@
 .github-icon{
     width: 100%;
     height: 100%;
+}
+
+@media screen and (max-width: 1919px) {
+    .projects-background-video{
+        display: none;
+    }
+    
 }
 
 @media screen and (max-width: 1024px) {
