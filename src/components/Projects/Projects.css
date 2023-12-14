@@ -14,7 +14,7 @@
     font-size: 6vw;
     line-height: 1;
     line-height: 1.5;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Comme', sans-serif;
 }
 
 .projects-section{
@@ -66,7 +66,7 @@
     font-size: 2vw;
     line-height: 1;
     line-height: 1.5;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Comme', sans-serif;
 }
 
 .project-description{
@@ -76,7 +76,7 @@
     line-height: 1.5rem;
     width: 90%;
     text-align: center;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Comme', sans-serif;
 }
 
 .project-technos{

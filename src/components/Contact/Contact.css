@@ -21,7 +21,7 @@
     font-size: 6vw;
     line-height: 1;
     line-height: 1.5;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Comme', sans-serif;
 }
 
 .contact-form-wrapper{
@@ -73,7 +73,7 @@
     font-size: 1.5vw;
     background-color: #0b0b29;
     color: #fff;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Comme', sans-serif;
 }
 
 .input-form-area{
@@ -86,7 +86,7 @@
     font-size: 1.5vw;
     background-color: #0b0b29;
     color: #fff;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Comme', sans-serif;
 }
 
 textarea{
@@ -97,7 +97,7 @@ textarea{
     font-size: 1.5vw;
     color: #fff;
     margin-bottom: 10px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Comme', sans-serif;
 }
 
 .button-form{
@@ -110,13 +110,13 @@ textarea{
     background-color: #0b0b29;
     color: #fff;
     cursor: pointer;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Comme', sans-serif;
 }
 
 .contact-message{
     color: #fff;
     font-size: 1.5rem;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Comme', sans-serif;
     
 }
 

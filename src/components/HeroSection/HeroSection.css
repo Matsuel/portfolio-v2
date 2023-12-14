@@ -30,7 +30,7 @@
     margin-bottom: 1rem;
     color: rgb(255, 255, 255);
     font-weight: 800;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Comme', sans-serif;
     font-size: 4vw;
     line-height: 1;
     line-height: 1.5;
@@ -49,7 +49,7 @@
     margin-bottom: 1.5rem;
     font-size: 1vw;
     line-height: 1.5rem;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Comme', sans-serif;
 }
 
 .button-contact-hero {
@@ -64,7 +64,7 @@
     background: linear-gradient(to right, #dc2626, #9d00ff);
     color: #fff;
     border: none;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Comme', sans-serif;
 }
 
 .button-contact-hero:hover {
