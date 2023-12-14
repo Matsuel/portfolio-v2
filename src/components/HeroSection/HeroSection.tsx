@@ -84,7 +84,7 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </motion.h1>
-          <p className="lorem-p-hero sm:text-lg lg:text-xl">
+          <p className="lorem-p-hero">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
             voluptuous.
           </p>
