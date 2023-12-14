@@ -34,6 +34,9 @@ interface Props {
 // }
 
 const SkillsDataProvider = ({src,index}:Props) => {
+
+    const windowHeight = window.innerHeight*0.15
+
     const [ref, inView] = useInView({
         triggerOnce: true,
     })
@@ -55,21 +58,21 @@ const SkillsDataProvider = ({src,index}:Props) => {
     transition={{delay:animationDelay*index}}
     >
         {
-            src=== 'bootstrap' ? <img src={Bootstrap} width={130} height={130} alt="Bootstrap" /> :
-            src=== 'cpp' ? <img src={Cpp} width={130} height={130} alt="C++" /> :
-            src=== 'css' ? <img src={Css} width={130} height={130} alt="CSS" /> :
-            src=== 'golang' ? <img src={Golang} width={130} height={130} alt="Golang" /> :
-            src=== 'html' ? <img src={Html} width={130} height={130} alt="HTML" /> :
-            src=== 'java' ? <img src={Java} width={130} height={130} alt="Java" /> :
-            src=== 'javascript' ? <img src={Javascript} width={130} height={130} alt="Javascript" /> :
-            src=== 'php' ? <img src={Php} width={130} height={130} alt="PHP" /> :
-            src=== 'python' ? <img src={Python} width={130} height={130} alt="Python" /> :
-            src=== 'react' ? <img src={Reactjs} width={130} height={130} alt="React" /> :
-            src=== 'react-native' ? <img src={ReactNative} width={130} height={130} alt="React Native" /> :
-            src=== 'typescript' ? <img src={Typescript} width={130} height={130} alt="Typescript" /> :
-            src=== 'tailwindcss' ? <img src={TailwindCss} width={130} height={130} alt="Tailwindcss" /> :
-            src=== 'csharp' ? <img src={Csharp} width={130} height={130} alt="C#" /> :
-            <img src={Css} width={130} height={130} alt="CSS" />
+            src=== 'bootstrap' ? <img src={Bootstrap} height={windowHeight} alt="Bootstrap" /> :
+            src=== 'cpp' ? <img src={Cpp} height={windowHeight} alt="C++" /> :
+            src=== 'css' ? <img src={Css} height={windowHeight} alt="CSS" /> :
+            src=== 'golang' ? <img src={Golang} height={windowHeight} alt="Golang" /> :
+            src=== 'html' ? <img src={Html} height={windowHeight} alt="HTML" /> :
+            src=== 'java' ? <img src={Java} height={windowHeight} alt="Java" /> :
+            src=== 'javascript' ? <img src={Javascript} height={windowHeight} alt="Javascript" /> :
+            src=== 'php' ? <img src={Php} height={windowHeight} alt="PHP" /> :
+            src=== 'python' ? <img src={Python} height={windowHeight} alt="Python" /> :
+            src=== 'react' ? <img src={Reactjs} height={windowHeight} alt="React" /> :
+            src=== 'react-native' ? <img src={ReactNative} height={windowHeight} alt="React Native" /> :
+            src=== 'typescript' ? <img src={Typescript} height={windowHeight} alt="Typescript" /> :
+            src=== 'tailwindcss' ? <img src={TailwindCss} height={windowHeight} alt="Tailwindcss" /> :
+            src=== 'csharp' ? <img src={Csharp} height={windowHeight} alt="C#" /> :
+            <img src={Css} height={windowHeight} alt="CSS" />
         }
 
     </motion.div>
