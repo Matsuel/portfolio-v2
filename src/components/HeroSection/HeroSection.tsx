@@ -6,6 +6,7 @@ import Lottie from 'react-lottie'
 import animationData from "../../assets/coffee.json"
 
 const HeroSection = () => {
+  const windowHeight = window.innerHeight;
 
   const [isEnterPressed, setIsEnterPressed] = useState(false);
 
@@ -25,6 +26,7 @@ const HeroSection = () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
   }, []);
+    
 
   const defaultOptions = {
     loop: true,
@@ -73,7 +75,7 @@ const HeroSection = () => {
           </div>
         </motion.div>
         <motion.div animate={{ scale: isEnterPressed ? 1.3 : 1 }} transition={{duration:0.3}} className="motion-2">
-          <Lottie options={defaultOptions} height={600} width={600} />
+          <Lottie options={defaultOptions} height={windowHeight*0.62}  />
         </motion.div>
       </div>
     </section>

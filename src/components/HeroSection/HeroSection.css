@@ -3,25 +3,24 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
+    min-height: 80vh;
 }
 
 .hero-section-wrapper {
     margin-top: 7rem;
-    height: 100%;
+    min-height: 100%;
 }
 
 .motion-1 {
-    flex: 0 0 60%;
-    grid-column: span 8 / span 8;
+    width: 60%;
     place-self: center;
     text-align: center;
     justify-self: start;
+    margin-right: 1rem;
 }
 
 .motion-2 {
-    flex: 0 0 40%;
-    grid-column: span 8 / span 8;
+    width: 30%;
     place-self: center;
     text-align: center;
     justify-self: end;
@@ -32,7 +31,7 @@
     color: rgb(255, 255, 255);
     font-weight: 800;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 6rem;
+    font-size: 4vw;
     line-height: 1;
     line-height: 1.5;
 }
@@ -48,7 +47,7 @@
 .lorem-p-hero {
     color: rgb(173, 183, 190);
     margin-bottom: 1.5rem;
-    font-size: 1rem;
+    font-size: 1vw;
     line-height: 1.5rem;
     font-family: 'Ubuntu', sans-serif;
 }
@@ -72,47 +71,43 @@
     cursor: pointer;
 }
 
-@media screen and (min-width: 1024px) {
-    .hero-section-wrapper {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-    }
-
-    .h1-title-hero {
-        font-size: 6rem;
-        line-height: 1;
-        line-height: 1.5;
-    }
-
-    .lorem-p-hero {
-        font-size: 1.5rem;
-        line-height: 2rem;
-
-    }
-
-}
-
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1024px) {
     .hero-section-main {
-        grid-template-columns: repeat(12, minmax(0, 1fr));
+        flex-direction: column;
     }
 
     .motion-1 {
-        text-align: left;
+        width: 100%;
+        grid-column: span 12 / span 12;
+        place-self: center;
+        text-align: center;
+        justify-self: start;
+        margin-right: 0;
     }
 
+    .motion-2 {
+        margin-top: 2rem;
+        width: 100%;
+        grid-column: span 12 / span 12;
+        place-self: center;
+        text-align: center;
+        justify-self: end;
+    }
+
+    .h1-title-hero{
+        width: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+
     .h1-title-hero {
-        font-size: 3rem;
-        line-height: 1;
+        font-size: 8vw;
     }
 
     .lorem-p-hero {
-        font-size: 1.125rem;
-        line-height: 1.75rem;
+        font-size: 1.5vw;
     }
-
-    .button-contact-hero {
-        width: 100%;
-    }
-
+    
 }
