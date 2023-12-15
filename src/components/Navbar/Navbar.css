@@ -62,3 +62,27 @@ a{
     width: 25px;
     fill: #9d00ff;
 }
+
+@media screen and (max-width: 768px){
+    .navbar-wrapper{
+        flex-direction: column;
+        height: 15%;
+    }
+
+    .navbar-logo-wrapper{
+        width: 100%;
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .navbar-links{
+        width: 100%;
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    .a-link{
+        padding: 0;
+    }
+    
+}
