@@ -30,9 +30,6 @@ const SubtitleNoAnimation = ()=> {
     )
 }
 
-
-
-
 const Skills = () => {
 
     const windowWidth = window.innerWidth;
