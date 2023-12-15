@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import './Projects.css'
 import { motion } from 'framer-motion'
 import { ProjectsDatas } from './datas'
-import { FaGithub, FaGit } from 'react-icons/fa'
 import ReactIcon from '../../assets/skills/react.svg'
 import RactNative from '../../assets/skills/react-native.svg'
 import Css from '../../assets/skills/css.svg'
@@ -15,6 +14,7 @@ import Chrome from '../../assets/chrome.svg'
 //@ts-ignore
 import Encryption from '../../assets/encryption.webm'
 import Git from '../../assets/git.svg'
+import { useParallax } from 'react-scroll-parallax'
 
 const icons = {
   react: ReactIcon,
@@ -28,6 +28,8 @@ const icons = {
 }
 
 const Projects = () => {
+
+  const parallaxH1= useParallax<HTMLHeadingElement>({scale:[2,0.6]});
 
   const [githubHovered, setGithubHovered] = useState({});
   const [githubClicked, setGithubClicked] = useState({});
@@ -73,7 +75,7 @@ const Projects = () => {
       className={`projects-section-wrapper ${windowWidth < 1920 ? 'background-gradient-projects' : ''}`}
     >
       <video autoPlay loop muted src={Encryption} className='projects-background-video'></video>
-      <h1 className='projects-title'>Projects</h1>
+      <h1 ref={parallaxH1.ref} className='projects-title'>Projects</h1>
       <div className="projects-section">
         {ProjectsDatas.map((project, index) => (
           <motion.div

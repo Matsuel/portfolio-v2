@@ -5,6 +5,7 @@
     /* height: auto; */
     width: 100%;
     min-height: 100vh;
+    background: linear-gradient(to bottom, #030214, #0a192f);
 }
 
 .contact-wrap{

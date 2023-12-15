@@ -2,7 +2,6 @@ export const ProjectsDatas = [
     {
         title: "Portfolio",
         githubLink: "https://github.com/Matsuel/portfolio",
-        liveLink: "ertyui",
         technologies: ["react", "css"],
         description:"First website made with css"
     },
