@@ -13,14 +13,13 @@ const Skills = () => {
         <section
             id="about"
             className="section-skills"
-            style={{ transform: "scale(0.9)" }}
         >
-            <div className="text-skills">
+            <div className="text-skills" style={{ transform: "scale(0.9)" }}>
                 <h2 ref={parallaxTitle.ref} className="section-title">Skills 🛠️</h2>
                 <p ref={parallaxSubtitle.ref} className="section-subtitle">Currently a student, I am immersed in the captivating world of IT and development, I am training in a variety of programming languages ​​which allow me to acquire skills and allow me to become more efficient in my different projects</p>
             </div>
 
-            <div className="skills-wrap">
+            <div className="skills-wrap" style={{ transform: "scale(0.9)" }}>
                 {Skill_data.map((image, index) => (
                     <SkillsDataProvider
                         key={index}
