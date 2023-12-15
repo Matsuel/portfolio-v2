@@ -13,7 +13,7 @@
     flex-direction: row;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 .contact-title{
@@ -128,7 +128,7 @@ textarea{
 
     .contact-form-wrapper{
         width: 60%;
-        height: 80vh;
+        height: 60vh;
     }
 
     .contact-planet{
@@ -168,6 +168,49 @@ textarea{
 
     .contact-message{
         font-size: 3vw;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .contact-form-wrapper{
+        width: 60%;
+        height: 60vh;
+    }
+
+    .contact-planet{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    .contact-form-wrapper{
+        height: 60 vh;
+    }
+
+    .contact-title{
+        font-size: 15vw;
+    }
+
+    .input-form-text{
+        font-size: 5vw;
+    }
+
+    .input-form-area{
+        font-size: 5vw;
+    }
+
+    .field-contact-text{
+        font-size: 5vw;
+    }
+
+    .button-form{
+        font-size: 5vw;
+    }
+
+    .contact-message{
+        font-size: 5vw;
     }
     
 }
