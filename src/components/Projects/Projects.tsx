@@ -32,6 +32,8 @@ const Projects = () => {
   const [githubHovered, setGithubHovered] = useState({});
   const [githubClicked, setGithubClicked] = useState({});
 
+  const windowWidth = window.innerWidth;
+
   useEffect(() => {
     const intervals = ProjectsDatas.map((_, index) => {
       return setInterval(() => {
@@ -68,7 +70,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="projects-section-wrapper"
+      className={`projects-section-wrapper ${windowWidth < 1920 ? 'background-gradient-projects' : ''}`}
     >
       <video autoPlay loop muted src={Encryption} className='projects-background-video'></video>
       <h1 className='projects-title'>Projects</h1>
