@@ -27,6 +27,7 @@
 .a-link{
     color: #ccd6f6;
     padding: 10px;  
+    font-size: 1vw;
 }
 
 .a-link:hover{
@@ -36,7 +37,7 @@
 
 .num-link{
     color: #9d00ff;
-    font-size: 1rem;
+    font-size: 1vw;
     font-weight: bold;
 }
 
@@ -66,13 +67,14 @@ a{
 @media screen and (max-width: 768px){
     .navbar-wrapper{
         flex-direction: column;
-        height: 15%;
+        height: auto;
     }
 
     .navbar-logo-wrapper{
         width: 100%;
         justify-content: center;
         padding-left: 0;
+        margin-bottom: 35px;
     }
 
     .navbar-links{
@@ -83,6 +85,31 @@ a{
 
     .a-link{
         padding: 0;
+        font-size: 2vw;
+    }
+    
+    .num-link{
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .num-link{
+        font-size: 2.5vw;
+    }
+
+    .a-link{
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .num-link{
+        font-size: 3.5vw;
+    }
+
+    .a-link{
+        font-size: 3.5vw;
     }
     
 }
