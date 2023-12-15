@@ -4,6 +4,7 @@ import { TypeAnimation } from 'react-type-animation'
 import './HeroSection.css'
 import Lottie from 'react-lottie'
 import animationData from "../../assets/coffee.json"
+import { Parallax } from 'react-scroll-parallax';
 
 const HeroSection = () => {
   const windowHeight = window.innerHeight;
@@ -92,9 +93,11 @@ const HeroSection = () => {
             <button onClick={() => window.location.href = "#contact"} className='button-contact-hero'>Hire me</button>
           </div>
         </motion.div>
-        <motion.div animate={{ scale: isEnterPressed ? 1.3 : 1 }} transition={{ duration: 0.3 }} className="motion-2">
+        <Parallax className='motion-2' translateY={[100, -100]} draggable={true} >
+        <motion.div animate={{ scale: isEnterPressed ? 1.3 : 1 }} transition={{ duration: 0.3 }} className="parallax-motion-2-hero">
           <Lottie options={defaultOptions} height={windowHeight * 0.62} />
         </motion.div>
+        </Parallax>
       </div>
     </section>
   )
