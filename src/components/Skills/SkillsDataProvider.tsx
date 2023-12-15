@@ -28,7 +28,7 @@ const SkillsDataProvider = ({ src, index }: Props) => {
         triggerOnce: true,
     })
 
-    const windowHeight = window.innerHeight * 0.15
+    const windowWidth = window.innerWidth>1000 ? window.innerWidth*0.1 : window.innerWidth> 600 ? window.innerWidth*0.05 : window.innerWidth*0.1;
 
     const imageVariants = {
         hidden: { opacity: 0 },
@@ -46,21 +46,21 @@ const SkillsDataProvider = ({ src, index }: Props) => {
             transition={{ delay: animationDelay * index }}
         >
             {
-                src === 'bootstrap' ? <img src={Bootstrap} height={windowHeight} alt="Bootstrap" /> :
-                    src === 'cpp' ? <img src={Cpp} height={windowHeight} alt="C++" /> :
-                        src === 'css' ? <img src={Css} height={windowHeight} alt="CSS" /> :
-                            src === 'golang' ? <img src={Golang} height={windowHeight} alt="Golang" /> :
-                                src === 'html' ? <img src={Html} height={windowHeight} alt="HTML" /> :
-                                    src === 'java' ? <img src={Java} height={windowHeight} alt="Java" /> :
-                                        src === 'javascript' ? <img src={Javascript} height={windowHeight} alt="Javascript" /> :
-                                            src === 'php' ? <img src={Php} height={windowHeight} alt="PHP" /> :
-                                                src === 'python' ? <img src={Python} height={windowHeight} alt="Python" /> :
-                                                    src === 'react' ? <img src={Reactjs} height={windowHeight} alt="React" /> :
-                                                        src === 'react-native' ? <img src={ReactNative} height={windowHeight} alt="React Native" /> :
-                                                            src === 'typescript' ? <img src={Typescript} height={windowHeight} alt="Typescript" /> :
-                                                                src === 'tailwindcss' ? <img src={TailwindCss} height={windowHeight} alt="Tailwindcss" /> :
-                                                                    src === 'csharp' ? <img src={Csharp} height={windowHeight} alt="C#" /> :
-                                                                        <img src={Css} height={windowHeight} alt="CSS" />
+                src === 'bootstrap' ? <img src={Bootstrap} height={windowWidth} alt="Bootstrap" /> :
+                    src === 'cpp' ? <img src={Cpp} height={windowWidth} alt="C++" /> :
+                        src === 'css' ? <img src={Css} height={windowWidth} alt="CSS" /> :
+                            src === 'golang' ? <img src={Golang} height={windowWidth} alt="Golang" /> :
+                                src === 'html' ? <img src={Html} height={windowWidth} alt="HTML" /> :
+                                    src === 'java' ? <img src={Java} height={windowWidth} alt="Java" /> :
+                                        src === 'javascript' ? <img src={Javascript} height={windowWidth} alt="Javascript" /> :
+                                            src === 'php' ? <img src={Php} height={windowWidth} alt="PHP" /> :
+                                                src === 'python' ? <img src={Python} height={windowWidth} alt="Python" /> :
+                                                    src === 'react' ? <img src={Reactjs} height={windowWidth} alt="React" /> :
+                                                        src === 'react-native' ? <img src={ReactNative} height={windowWidth} alt="React Native" /> :
+                                                            src === 'typescript' ? <img src={Typescript} height={windowWidth} alt="Typescript" /> :
+                                                                src === 'tailwindcss' ? <img src={TailwindCss} height={windowWidth} alt="Tailwindcss" /> :
+                                                                    src === 'csharp' ? <img src={Csharp} height={windowWidth} alt="C#" /> :
+                                                                        <img src={Css} height={windowWidth} alt="CSS" />
             }
         </motion.div>
     )
