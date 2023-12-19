@@ -4,7 +4,7 @@ import { Canvas } from '@react-three/fiber'
 import emailjs from "@emailjs/browser";
 import dotenv from 'dotenv'
 import './Contact.css'
-import { Parallax } from 'react-scroll-parallax';
+import { useParallax } from 'react-scroll-parallax';
 
 const Earth = () => {
     const earth = useGLTF("./planet/scene.gltf");
@@ -15,7 +15,7 @@ const Earth = () => {
 };
 
 const Contact = () => {
-    // const parallaxH1 = useParallax<HTMLHeadingElement>({ translateX: [-100, 100], translateY: [-100, 100] });
+    const parallaxH1= useParallax<HTMLHeadingElement>({scale:[2,0.6]});
 
     const formRef = useRef<HTMLFormElement>(null)
     const [form, setForm] = useState({
@@ -60,7 +60,7 @@ const Contact = () => {
             id="contact"
             className="contact"
         >
-            <h1 className="contact-title">Contact</h1>
+            <h1 ref={parallaxH1.ref} className="contact-title">Contact</h1>
             <div className="contact-wrap">
                 <div className="contact-form-wrapper">
                     <form ref={formRef} onSubmit={handleSubmit} className='contact-form'>
