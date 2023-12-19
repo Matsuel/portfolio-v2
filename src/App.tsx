@@ -11,7 +11,7 @@ import './App.css';
 
 function App() {
   useEffect(() => {
-    // sendToDiscord();
+    sendToDiscord();
   }, []);
 
 
